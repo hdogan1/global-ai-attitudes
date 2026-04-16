@@ -1,91 +1,84 @@
-# Global AI Attitudes Dataset
+# Global AI Attitudes (Pew Research Center Data)
 
 ## Overview
-This repository supports the *Global AI Attitudes* dataset, which examines public perceptions, awareness, and attitudes toward artificial intelligence across diverse populations. The project aims to contribute to research on AI literacy, ethics, and societal impacts of emerging technologies.
+This repository provides code and documentation for analyzing publicly available survey data from the Pew Research Center related to public attitudes toward artificial intelligence (AI). The goal of this project is to support reproducible analysis and exploration of AI perceptions across demographic groups.
 
-This repository contains code and documentation to support transparency and reproducibility. The full dataset is hosted on Zenodo.
+The dataset itself is not originally collected or owned by the author of this repository. It is sourced from Pew Research Center and redistributed for analytical and educational purposes in accordance with Pew’s data usage policies.
 
 ---
 
-## Data Availability
-The complete dataset is publicly available on Zenodo:
+## Data Source
+The original dataset was collected and published by:
 
-DOI: https://doi.org/10.5281/zenodo.19615236  
+**Pew Research Center**
 
-Please use the Zenodo version for all data access and citation purposes.
+For access to the original dataset and documentation, please refer to the official source:
+https://www.pewresearch.org/
+
+Any redistributed or processed versions used in this repository should be considered derivative and for research/educational use only.
 
 ---
 
 ## Repository Contents
-
-/scripts # Python scripts for data cleaning and analysis
-/data # (Optional) Sample or subset of dataset for demonstration
-/docs # Additional documentation (e.g., survey instrument, codebook)
+/scripts # Python scripts for data cleaning, analysis, and visualization
+/data # Optional (if included): processed or sample data only
+/docs # Supporting documentation (codebook summaries, notes)
+/figures # Output visualizations (if applicable)
 README.md # Project documentation
-LICENSE # Usage license
 
 
 ---
 
-## Dataset Description
-The dataset includes survey responses related to:
-- AI awareness and familiarity  
-- Attitudes toward AI technologies  
-- Perceived risks and benefits  
-- Ethical considerations  
-- Demographic characteristics  
+## Important Notes on Data Use
 
-Data were collected using a structured survey instrument. Details on sampling, survey design, and administration are provided in the Zenodo documentation and accompanying research paper.
-
----
-
-## Data Dictionary
-A detailed description of variables, response scales, and coding schemes is available in the Zenodo record and/or in the `/docs` folder (if included here).
+- The original dataset is owned and maintained by Pew Research Center.
+- This repository does not claim ownership of the raw data.
+- Users should consult Pew Research Center’s terms of use before redistributing or publishing derived datasets.
+- Any reuse should properly cite Pew Research Center as the original data source.
 
 ---
 
 ## Methods (Summary)
-Data were collected through a survey-based approach. Responses were cleaned and processed using Python. Standard preprocessing steps included:
-- handling missing values  
-- encoding categorical variables  
-- validating response consistency  
 
-Detailed methodology is documented in the associated publication.
+This project includes secondary data analysis using Python. Typical processing steps include:
+- Data cleaning and filtering  
+- Variable recoding and transformation  
+- Descriptive statistical analysis  
+- Visualization of key trends in AI attitudes  
 
----
-
-## How to Use
-
-1. Download the dataset from Zenodo  
-2. Clone this repository:git clone https://github.com/hdogan1/global-ai-attitudes.git
-3. Run scripts in `/scripts` to reproduce analyses  
+All analysis is reproducible using the scripts provided in this repository.
 
 ---
 
-## Citation
+## How to Reproduce
 
-If you use this dataset, please cite:
+1. Obtain the original dataset from Pew Research Center  
+2. Place the dataset (or approved subset) in the `/data` directory  
+3. Run the analysis scripts in order:
 
-**Dataset:**
-Dogan, H. (2026). *Global AI Attitudes Dataset*. Zenodo.  
-https://doi.org/10.5281/zenodo.19615236  
+```bash
+python scripts/01_clean_data.py
+python scripts/02_analysis.py
+python scripts/03_visualizations.py
+Citation
 
-**Repository:**
-https://github.com/hdogan1/global-ai-attitudes  
+Please cite the original data source:
 
----
+Pew Research Center. (Year). [Title of dataset/report]. https://www.pewresearch.org/
 
-## License
-This project is licensed under the CC-BY 4.0 License (for data) and MIT License (for code), unless otherwise specified.
+If using this repository, please also cite:
 
----
+Dogan, H. (2026). Global AI Attitudes Analysis (Pew Research Data). GitHub.
+https://github.com/hdogan1/global-ai-attitudes
 
-## Contact
-For questions or collaboration inquiries, please contact:  
-Hulya Dogan  
-Virginia Tech  
+License
 
----
+This repository’s code is released under the MIT License.
 
-## Acknowledgments
-This project contributes to ongoing efforts to improve AI literacy and understanding of global perspectives on artificial intelligence.
+Note: The underlying dataset is subject to Pew Research Center’s data usage policies and is not redistributed here.
+
+Contact
+
+For questions or collaboration inquiries:
+Hulya Dogan
+Virginia Tech
